@@ -1,0 +1,1399 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+ */
+
+/* body {
+  padding: 0;
+  margin: 0;
+  background-color:#ffffff;
+  background-image: radial-gradient(
+    #cecece 6px,
+    transparent 6px
+  );
+  background-size: 60px 60px;
+  animation: moveDots 5s linear infinite, pulsate 2s linear infinite;
+} */
+
+/* @keyframes moveDots {
+  0% {
+    background-position: 60px 60px;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    background-color: 6px 6px;
+  }
+  100% {
+    background-size: 10px 10px;
+  }
+} */
+
+/* part of dots tutorial */
+/* *, *::before, *::after{
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+} */
+
+.dots{
+  display: grid;
+  grid-template-columns: repeat(20, 24px);
+  grid-template-rows: repeat(20, 24px);
+  place-items: center;
+}
+
+.dot{
+  width: 12px;
+  height: 12px;
+  background-color: hsl(var(--hue), 90%, 70%);
+  border-radius: 50%;
+  -webkit-animation: dot 24s calc(var(--delay1, 0s) + var(--delay2, 0s)) infinite ease-in-out;
+          animation: dot 24s calc(var(--delay1, 0s) + var(--delay2, 0s)) infinite ease-in-out;
+}
+
+@-webkit-keyframes dot{
+  from{
+    transform: rotate(0deg) translateX(24px); 
+  }
+  to{
+    transform: rotate(1440deg) translateX(24px);
+  }
+}
+
+@keyframes dot{
+  from{
+    transform: rotate(0deg) translateX(24px); 
+  }
+  to{
+    transform: rotate(1440deg) translateX(24px);
+  }
+}
+
+.dot:nth-child(1) {
+  --hue: 306.7947387485;
+}
+.dot:nth-child(2) {
+  --hue: 249.07406692;
+}
+.dot:nth-child(3) {
+  --hue: 295.7714985035;
+}
+.dot:nth-child(4) {
+  --hue: 92.2525551036;
+}
+.dot:nth-child(5) {
+  --hue: 28.8756562075;
+}
+.dot:nth-child(6) {
+  --hue: 60.2408995038;
+}
+.dot:nth-child(7) {
+  --hue: 239.357425675;
+}
+.dot:nth-child(8) {
+  --hue: 109.6726166189;
+}
+.dot:nth-child(9) {
+  --hue: 236.57119637;
+}
+.dot:nth-child(10) {
+  --hue: 68.029009384;
+}
+.dot:nth-child(11) {
+  --hue: 343.3726004369;
+}
+.dot:nth-child(12) {
+  --hue: 93.0386292974;
+}
+.dot:nth-child(13) {
+  --hue: 171.7101671273;
+}
+.dot:nth-child(14) {
+  --hue: 328.0051703389;
+}
+.dot:nth-child(15) {
+  --hue: 75.248432475;
+}
+.dot:nth-child(16) {
+  --hue: 333.2377040283;
+}
+.dot:nth-child(17) {
+  --hue: 291.0178349866;
+}
+.dot:nth-child(18) {
+  --hue: 273.8299817177;
+}
+.dot:nth-child(19) {
+  --hue: 320.9484847333;
+}
+.dot:nth-child(20) {
+  --hue: 125.1365242292;
+}
+.dot:nth-child(21) {
+  --hue: 233.2554795302;
+}
+.dot:nth-child(22) {
+  --hue: 33.2220053278;
+}
+.dot:nth-child(23) {
+  --hue: 291.418788023;
+}
+.dot:nth-child(24) {
+  --hue: 351.8224194639;
+}
+.dot:nth-child(25) {
+  --hue: 236.7310100332;
+}
+.dot:nth-child(26) {
+  --hue: 122.7610348907;
+}
+.dot:nth-child(27) {
+  --hue: 183.5913440804;
+}
+.dot:nth-child(28) {
+  --hue: 276.4125315702;
+}
+.dot:nth-child(29) {
+  --hue: 18.5503212074;
+}
+.dot:nth-child(30) {
+  --hue: 254.7945543078;
+}
+.dot:nth-child(31) {
+  --hue: 134.4225177579;
+}
+.dot:nth-child(32) {
+  --hue: 174.0511096285;
+}
+.dot:nth-child(33) {
+  --hue: 95.2272770526;
+}
+.dot:nth-child(34) {
+  --hue: 350.6887191486;
+}
+.dot:nth-child(35) {
+  --hue: 114.0059710708;
+}
+.dot:nth-child(36) {
+  --hue: 4.7847205448;
+}
+.dot:nth-child(37) {
+  --hue: 291.6943561576;
+}
+.dot:nth-child(38) {
+  --hue: 315.0114151807;
+}
+.dot:nth-child(39) {
+  --hue: 326.7409972236;
+}
+.dot:nth-child(40) {
+  --hue: 193.2730021856;
+}
+.dot:nth-child(41) {
+  --hue: 150.7758997754;
+}
+.dot:nth-child(42) {
+  --hue: 149.6950761249;
+}
+.dot:nth-child(43) {
+  --hue: 20.1105528387;
+}
+.dot:nth-child(44) {
+  --hue: 99.9556967861;
+}
+.dot:nth-child(45) {
+  --hue: 65.9541694483;
+}
+.dot:nth-child(46) {
+  --hue: 240.1011297805;
+}
+.dot:nth-child(47) {
+  --hue: 167.8030526713;
+}
+.dot:nth-child(48) {
+  --hue: 113.3132808485;
+}
+.dot:nth-child(49) {
+  --hue: 260.0012845237;
+}
+.dot:nth-child(50) {
+  --hue: 87.6157575095;
+}
+.dot:nth-child(51) {
+  --hue: 49.1111633428;
+}
+.dot:nth-child(52) {
+  --hue: 340.672937526;
+}
+.dot:nth-child(53) {
+  --hue: 79.3259561374;
+}
+.dot:nth-child(54) {
+  --hue: 141.2968386018;
+}
+.dot:nth-child(55) {
+  --hue: 22.826753043;
+}
+.dot:nth-child(56) {
+  --hue: 107.0393376787;
+}
+.dot:nth-child(57) {
+  --hue: 7.3564117416;
+}
+.dot:nth-child(58) {
+  --hue: 61.6356801836;
+}
+.dot:nth-child(59) {
+  --hue: 10.7300198408;
+}
+.dot:nth-child(60) {
+  --hue: 230.315199691;
+}
+.dot:nth-child(61) {
+  --hue: 300.3723943602;
+}
+.dot:nth-child(62) {
+  --hue: 113.6078176432;
+}
+.dot:nth-child(63) {
+  --hue: 252.3563383381;
+}
+.dot:nth-child(64) {
+  --hue: 249.9636583578;
+}
+.dot:nth-child(65) {
+  --hue: 328.13583808;
+}
+.dot:nth-child(66) {
+  --hue: 48.7773502925;
+}
+.dot:nth-child(67) {
+  --hue: 86.5863760961;
+}
+.dot:nth-child(68) {
+  --hue: 286.8708892743;
+}
+.dot:nth-child(69) {
+  --hue: 256.2968329619;
+}
+.dot:nth-child(70) {
+  --hue: 164.0132724477;
+}
+.dot:nth-child(71) {
+  --hue: 92.1556088315;
+}
+.dot:nth-child(72) {
+  --hue: 29.1745970254;
+}
+.dot:nth-child(73) {
+  --hue: 103.1565853466;
+}
+.dot:nth-child(74) {
+  --hue: 2.3231969423;
+}
+.dot:nth-child(75) {
+  --hue: 185.7857107181;
+}
+.dot:nth-child(76) {
+  --hue: 226.7704495501;
+}
+.dot:nth-child(77) {
+  --hue: 174.753624634;
+}
+.dot:nth-child(78) {
+  --hue: 295.6714034585;
+}
+.dot:nth-child(79) {
+  --hue: 251.55976791;
+}
+.dot:nth-child(80) {
+  --hue: 333.7955511111;
+}
+.dot:nth-child(81) {
+  --hue: 138.9595838141;
+}
+.dot:nth-child(82) {
+  --hue: 175.9955223654;
+}
+.dot:nth-child(83) {
+  --hue: 190.9853117597;
+}
+.dot:nth-child(84) {
+  --hue: 13.8465243893;
+}
+.dot:nth-child(85) {
+  --hue: 128.3048180875;
+}
+.dot:nth-child(86) {
+  --hue: 320.6038561866;
+}
+.dot:nth-child(87) {
+  --hue: 161.0893544173;
+}
+.dot:nth-child(88) {
+  --hue: 88.5417947805;
+}
+.dot:nth-child(89) {
+  --hue: 357.0011562853;
+}
+.dot:nth-child(90) {
+  --hue: 27.3899452366;
+}
+.dot:nth-child(91) {
+  --hue: 265.85828675;
+}
+.dot:nth-child(92) {
+  --hue: 29.1926884845;
+}
+.dot:nth-child(93) {
+  --hue: 356.7635632916;
+}
+.dot:nth-child(94) {
+  --hue: 88.4088393407;
+}
+.dot:nth-child(95) {
+  --hue: 261.2910045292;
+}
+.dot:nth-child(96) {
+  --hue: 183.8360969406;
+}
+.dot:nth-child(97) {
+  --hue: 219.646575702;
+}
+.dot:nth-child(98) {
+  --hue: 190.2357730584;
+}
+.dot:nth-child(99) {
+  --hue: 228.6414127506;
+}
+.dot:nth-child(100) {
+  --hue: 176.2581667992;
+}
+.dot:nth-child(101) {
+  --hue: 332.3834133014;
+}
+.dot:nth-child(102) {
+  --hue: 222.9808698838;
+}
+.dot:nth-child(103) {
+  --hue: 58.497191873;
+}
+.dot:nth-child(104) {
+  --hue: 22.5119457645;
+}
+.dot:nth-child(105) {
+  --hue: 142.7306790843;
+}
+.dot:nth-child(106) {
+  --hue: 120.5173958705;
+}
+.dot:nth-child(107) {
+  --hue: 270.2451458772;
+}
+.dot:nth-child(108) {
+  --hue: 91.6308543651;
+}
+.dot:nth-child(109) {
+  --hue: 110.5548222415;
+}
+.dot:nth-child(110) {
+  --hue: 6.5114510194;
+}
+.dot:nth-child(111) {
+  --hue: 121.1230489313;
+}
+.dot:nth-child(112) {
+  --hue: 301.5626791404;
+}
+.dot:nth-child(113) {
+  --hue: 323.3070453473;
+}
+.dot:nth-child(114) {
+  --hue: 97.7266031547;
+}
+.dot:nth-child(115) {
+  --hue: 137.7582689838;
+}
+.dot:nth-child(116) {
+  --hue: 49.1765310874;
+}
+.dot:nth-child(117) {
+  --hue: 48.0860961082;
+}
+.dot:nth-child(118) {
+  --hue: 188.7370663614;
+}
+.dot:nth-child(119) {
+  --hue: 282.8555480417;
+}
+.dot:nth-child(120) {
+  --hue: 330.4179416931;
+}
+.dot:nth-child(121) {
+  --hue: 322.7005784746;
+}
+.dot:nth-child(122) {
+  --hue: 101.4288795591;
+}
+.dot:nth-child(123) {
+  --hue: 243.3728014667;
+}
+.dot:nth-child(124) {
+  --hue: 287.8215442336;
+}
+.dot:nth-child(125) {
+  --hue: 322.1814883278;
+}
+.dot:nth-child(126) {
+  --hue: 313.1217583999;
+}
+.dot:nth-child(127) {
+  --hue: 211.0629703614;
+}
+.dot:nth-child(128) {
+  --hue: 80.3593530499;
+}
+.dot:nth-child(129) {
+  --hue: 54.2839299912;
+}
+.dot:nth-child(130) {
+  --hue: 72.7168104742;
+}
+.dot:nth-child(131) {
+  --hue: 148.6088826214;
+}
+.dot:nth-child(132) {
+  --hue: 17.0239846525;
+}
+.dot:nth-child(133) {
+  --hue: 239.5291279619;
+}
+.dot:nth-child(134) {
+  --hue: 340.3209039266;
+}
+.dot:nth-child(135) {
+  --hue: 230.3812755913;
+}
+.dot:nth-child(136) {
+  --hue: 236.6967720495;
+}
+.dot:nth-child(137) {
+  --hue: 102.9165845831;
+}
+.dot:nth-child(138) {
+  --hue: 104.7276686383;
+}
+.dot:nth-child(139) {
+  --hue: 312.5497163123;
+}
+.dot:nth-child(140) {
+  --hue: 238.0765823562;
+}
+.dot:nth-child(141) {
+  --hue: 187.0915091107;
+}
+.dot:nth-child(142) {
+  --hue: 63.1902559136;
+}
+.dot:nth-child(143) {
+  --hue: 342.4995220256;
+}
+.dot:nth-child(144) {
+  --hue: 243.6357381942;
+}
+.dot:nth-child(145) {
+  --hue: 179.9262907547;
+}
+.dot:nth-child(146) {
+  --hue: 184.4137335861;
+}
+.dot:nth-child(147) {
+  --hue: 202.800696175;
+}
+.dot:nth-child(148) {
+  --hue: 263.6178687965;
+}
+.dot:nth-child(149) {
+  --hue: 114.2667256436;
+}
+.dot:nth-child(150) {
+  --hue: 191.9999247816;
+}
+.dot:nth-child(151) {
+  --hue: 223.7827703709;
+}
+.dot:nth-child(152) {
+  --hue: 112.7738568029;
+}
+.dot:nth-child(153) {
+  --hue: 278.9142974851;
+}
+.dot:nth-child(154) {
+  --hue: 124.0462277359;
+}
+.dot:nth-child(155) {
+  --hue: 337.379655551;
+}
+.dot:nth-child(156) {
+  --hue: 343.7956450292;
+}
+.dot:nth-child(157) {
+  --hue: 205.0945657277;
+}
+.dot:nth-child(158) {
+  --hue: 176.0774250543;
+}
+.dot:nth-child(159) {
+  --hue: 359.8137432985;
+}
+.dot:nth-child(160) {
+  --hue: 346.9182007172;
+}
+.dot:nth-child(161) {
+  --hue: 211.7096530812;
+}
+.dot:nth-child(162) {
+  --hue: 279.0696351005;
+}
+.dot:nth-child(163) {
+  --hue: 207.8427866508;
+}
+.dot:nth-child(164) {
+  --hue: 269.4658615322;
+}
+.dot:nth-child(165) {
+  --hue: 91.1385052001;
+}
+.dot:nth-child(166) {
+  --hue: 244.5841858554;
+}
+.dot:nth-child(167) {
+  --hue: 106.4899652331;
+}
+.dot:nth-child(168) {
+  --hue: 353.6617105317;
+}
+.dot:nth-child(169) {
+  --hue: 229.263790113;
+}
+.dot:nth-child(170) {
+  --hue: 267.8825785687;
+}
+.dot:nth-child(171) {
+  --hue: 253.815261397;
+}
+.dot:nth-child(172) {
+  --hue: 114.3222150949;
+}
+.dot:nth-child(173) {
+  --hue: 49.0367574269;
+}
+.dot:nth-child(174) {
+  --hue: 3.1016666564;
+}
+.dot:nth-child(175) {
+  --hue: 248.8739617378;
+}
+.dot:nth-child(176) {
+  --hue: 5.6886615891;
+}
+.dot:nth-child(177) {
+  --hue: 220.2104693789;
+}
+.dot:nth-child(178) {
+  --hue: 332.3562043892;
+}
+.dot:nth-child(179) {
+  --hue: 147.9263393317;
+}
+.dot:nth-child(180) {
+  --hue: 122.3027417185;
+}
+.dot:nth-child(181) {
+  --hue: 140.6550594864;
+}
+.dot:nth-child(182) {
+  --hue: 320.5069024487;
+}
+.dot:nth-child(183) {
+  --hue: 122.1648625623;
+}
+.dot:nth-child(184) {
+  --hue: 193.2770605325;
+}
+.dot:nth-child(185) {
+  --hue: 165.6187716492;
+}
+.dot:nth-child(186) {
+  --hue: 152.4521802998;
+}
+.dot:nth-child(187) {
+  --hue: 126.4388150169;
+}
+.dot:nth-child(188) {
+  --hue: 258.9940771288;
+}
+.dot:nth-child(189) {
+  --hue: 199.5068983588;
+}
+.dot:nth-child(190) {
+  --hue: 163.0873045461;
+}
+.dot:nth-child(191) {
+  --hue: 84.085128975;
+}
+.dot:nth-child(192) {
+  --hue: 316.9726763596;
+}
+.dot:nth-child(193) {
+  --hue: 310.8774773974;
+}
+.dot:nth-child(194) {
+  --hue: 66.7924801138;
+}
+.dot:nth-child(195) {
+  --hue: 269.168425542;
+}
+.dot:nth-child(196) {
+  --hue: 87.9611422321;
+}
+.dot:nth-child(197) {
+  --hue: 353.4572272958;
+}
+.dot:nth-child(198) {
+  --hue: 82.3130245974;
+}
+.dot:nth-child(199) {
+  --hue: 19.9097399002;
+}
+.dot:nth-child(200) {
+  --hue: 139.335489368;
+}
+.dot:nth-child(201) {
+  --hue: 274.7622338039;
+}
+.dot:nth-child(202) {
+  --hue: 296.353476854;
+}
+.dot:nth-child(203) {
+  --hue: 161.0476229959;
+}
+.dot:nth-child(204) {
+  --hue: 32.452782758;
+}
+.dot:nth-child(205) {
+  --hue: 72.3657758208;
+}
+.dot:nth-child(206) {
+  --hue: 148.3731340973;
+}
+.dot:nth-child(207) {
+  --hue: 180.4312984591;
+}
+.dot:nth-child(208) {
+  --hue: 159.0960346305;
+}
+.dot:nth-child(209) {
+  --hue: 322.6616629435;
+}
+.dot:nth-child(210) {
+  --hue: 120.4424585266;
+}
+.dot:nth-child(211) {
+  --hue: 274.0606693323;
+}
+.dot:nth-child(212) {
+  --hue: 126.6534493174;
+}
+.dot:nth-child(213) {
+  --hue: 68.9954246799;
+}
+.dot:nth-child(214) {
+  --hue: 61.2144443288;
+}
+.dot:nth-child(215) {
+  --hue: 142.6080929652;
+}
+.dot:nth-child(216) {
+  --hue: 149.2324489267;
+}
+.dot:nth-child(217) {
+  --hue: 263.7986961932;
+}
+.dot:nth-child(218) {
+  --hue: 193.8162580702;
+}
+.dot:nth-child(219) {
+  --hue: 180.0851054774;
+}
+.dot:nth-child(220) {
+  --hue: 49.9979870085;
+}
+.dot:nth-child(221) {
+  --hue: 155.9638993476;
+}
+.dot:nth-child(222) {
+  --hue: 182.4508552774;
+}
+.dot:nth-child(223) {
+  --hue: 176.2551417573;
+}
+.dot:nth-child(224) {
+  --hue: 138.1786641929;
+}
+.dot:nth-child(225) {
+  --hue: 85.8617582239;
+}
+.dot:nth-child(226) {
+  --hue: 285.2220943226;
+}
+.dot:nth-child(227) {
+  --hue: 159.3268964823;
+}
+.dot:nth-child(228) {
+  --hue: 347.1719747071;
+}
+.dot:nth-child(229) {
+  --hue: 168.642881009;
+}
+.dot:nth-child(230) {
+  --hue: 251.7377149498;
+}
+.dot:nth-child(231) {
+  --hue: 214.6783208306;
+}
+.dot:nth-child(232) {
+  --hue: 185.7556841889;
+}
+.dot:nth-child(233) {
+  --hue: 286.7204241188;
+}
+.dot:nth-child(234) {
+  --hue: 286.350755502;
+}
+.dot:nth-child(235) {
+  --hue: 197.7398376264;
+}
+.dot:nth-child(236) {
+  --hue: 233.0977755625;
+}
+.dot:nth-child(237) {
+  --hue: 90.0462409414;
+}
+.dot:nth-child(238) {
+  --hue: 48.6369542693;
+}
+.dot:nth-child(239) {
+  --hue: 44.4334397063;
+}
+.dot:nth-child(240) {
+  --hue: 264.3112217267;
+}
+.dot:nth-child(241) {
+  --hue: 234.6906454753;
+}
+.dot:nth-child(242) {
+  --hue: 312.1711462918;
+}
+.dot:nth-child(243) {
+  --hue: 215.6556121468;
+}
+.dot:nth-child(244) {
+  --hue: 208.9974077781;
+}
+.dot:nth-child(245) {
+  --hue: 5.823224773;
+}
+.dot:nth-child(246) {
+  --hue: 189.2582673237;
+}
+.dot:nth-child(247) {
+  --hue: 51.1064673525;
+}
+.dot:nth-child(248) {
+  --hue: 79.1527990156;
+}
+.dot:nth-child(249) {
+  --hue: 307.1669381271;
+}
+.dot:nth-child(250) {
+  --hue: 100.1294356516;
+}
+.dot:nth-child(251) {
+  --hue: 311.4222928435;
+}
+.dot:nth-child(252) {
+  --hue: 118.8921967125;
+}
+.dot:nth-child(253) {
+  --hue: 280.9544997861;
+}
+.dot:nth-child(254) {
+  --hue: 110.8098834911;
+}
+.dot:nth-child(255) {
+  --hue: 139.9519372168;
+}
+.dot:nth-child(256) {
+  --hue: 117.6690832357;
+}
+.dot:nth-child(257) {
+  --hue: 88.1996897586;
+}
+.dot:nth-child(258) {
+  --hue: 107.4937971193;
+}
+.dot:nth-child(259) {
+  --hue: 225.0885968186;
+}
+.dot:nth-child(260) {
+  --hue: 162.6829197753;
+}
+.dot:nth-child(261) {
+  --hue: 94.2868194487;
+}
+.dot:nth-child(262) {
+  --hue: 127.5648017857;
+}
+.dot:nth-child(263) {
+  --hue: 266.3141208761;
+}
+.dot:nth-child(264) {
+  --hue: 214.5965036934;
+}
+.dot:nth-child(265) {
+  --hue: 208.5630132406;
+}
+.dot:nth-child(266) {
+  --hue: 311.5977983383;
+}
+.dot:nth-child(267) {
+  --hue: 47.5087416882;
+}
+.dot:nth-child(268) {
+  --hue: 158.2143866125;
+}
+.dot:nth-child(269) {
+  --hue: 73.2525991019;
+}
+.dot:nth-child(270) {
+  --hue: 255.3096849926;
+}
+.dot:nth-child(271) {
+  --hue: 321.1533145093;
+}
+.dot:nth-child(272) {
+  --hue: 313.9493938926;
+}
+.dot:nth-child(273) {
+  --hue: 281.2386046932;
+}
+.dot:nth-child(274) {
+  --hue: 183.0030184812;
+}
+.dot:nth-child(275) {
+  --hue: 3.0303923261;
+}
+.dot:nth-child(276) {
+  --hue: 277.1722441137;
+}
+.dot:nth-child(277) {
+  --hue: 114.2295321773;
+}
+.dot:nth-child(278) {
+  --hue: 47.7321151754;
+}
+.dot:nth-child(279) {
+  --hue: 144.6511228006;
+}
+.dot:nth-child(280) {
+  --hue: 106.5027719709;
+}
+.dot:nth-child(281) {
+  --hue: 264.9400470953;
+}
+.dot:nth-child(282) {
+  --hue: 39.0382385373;
+}
+.dot:nth-child(283) {
+  --hue: 208.134534568;
+}
+.dot:nth-child(284) {
+  --hue: 313.8382401936;
+}
+.dot:nth-child(285) {
+  --hue: 217.354780684;
+}
+.dot:nth-child(286) {
+  --hue: 130.8516303465;
+}
+.dot:nth-child(287) {
+  --hue: 90.6824024481;
+}
+.dot:nth-child(288) {
+  --hue: 134.8784027948;
+}
+.dot:nth-child(289) {
+  --hue: 210.2386278439;
+}
+.dot:nth-child(290) {
+  --hue: 348.8037615715;
+}
+.dot:nth-child(291) {
+  --hue: 57.5881326908;
+}
+.dot:nth-child(292) {
+  --hue: 26.2042267085;
+}
+.dot:nth-child(293) {
+  --hue: 225.4612986295;
+}
+.dot:nth-child(294) {
+  --hue: 36.4568537709;
+}
+.dot:nth-child(295) {
+  --hue: 16.8114101914;
+}
+.dot:nth-child(296) {
+  --hue: 141.1097906352;
+}
+.dot:nth-child(297) {
+  --hue: 329.4880405925;
+}
+.dot:nth-child(298) {
+  --hue: 31.4461852583;
+}
+.dot:nth-child(299) {
+  --hue: 83.9170496016;
+}
+.dot:nth-child(300) {
+  --hue: 200.344797887;
+}
+.dot:nth-child(301) {
+  --hue: 208.8261385253;
+}
+.dot:nth-child(302) {
+  --hue: 315.4362393718;
+}
+.dot:nth-child(303) {
+  --hue: 202.7360571328;
+}
+.dot:nth-child(304) {
+  --hue: 141.1664412913;
+}
+.dot:nth-child(305) {
+  --hue: 128.3135678623;
+}
+.dot:nth-child(306) {
+  --hue: 239.8417723311;
+}
+.dot:nth-child(307) {
+  --hue: 186.2339572675;
+}
+.dot:nth-child(308) {
+  --hue: 246.465425209;
+}
+.dot:nth-child(309) {
+  --hue: 11.1457543157;
+}
+.dot:nth-child(310) {
+  --hue: 350.5595893451;
+}
+.dot:nth-child(311) {
+  --hue: 341.7874512597;
+}
+.dot:nth-child(312) {
+  --hue: 253.2023829879;
+}
+.dot:nth-child(313) {
+  --hue: 91.8608080227;
+}
+.dot:nth-child(314) {
+  --hue: 210.075272418;
+}
+.dot:nth-child(315) {
+  --hue: 321.941283995;
+}
+.dot:nth-child(316) {
+  --hue: 89.5622997725;
+}
+.dot:nth-child(317) {
+  --hue: 215.4607601561;
+}
+.dot:nth-child(318) {
+  --hue: 334.2817110803;
+}
+.dot:nth-child(319) {
+  --hue: 296.6274210819;
+}
+.dot:nth-child(320) {
+  --hue: 164.7002242776;
+}
+.dot:nth-child(321) {
+  --hue: 71.3861090539;
+}
+.dot:nth-child(322) {
+  --hue: 29.0634280051;
+}
+.dot:nth-child(323) {
+  --hue: 249.0246193916;
+}
+.dot:nth-child(324) {
+  --hue: 100.7315149529;
+}
+.dot:nth-child(325) {
+  --hue: 199.7760211666;
+}
+.dot:nth-child(326) {
+  --hue: 321.1970028552;
+}
+.dot:nth-child(327) {
+  --hue: 0.68676411;
+}
+.dot:nth-child(328) {
+  --hue: 3.1990663;
+}
+.dot:nth-child(329) {
+  --hue: 0.2054015976;
+}
+.dot:nth-child(330) {
+  --hue: 122.4346762407;
+}
+.dot:nth-child(331) {
+  --hue: 176.9321514181;
+}
+.dot:nth-child(332) {
+  --hue: 51.5206097384;
+}
+.dot:nth-child(333) {
+  --hue: 92.3948357859;
+}
+.dot:nth-child(334) {
+  --hue: 316.5001030421;
+}
+.dot:nth-child(335) {
+  --hue: 354.7776699925;
+}
+.dot:nth-child(336) {
+  --hue: 62.133556127;
+}
+.dot:nth-child(337) {
+  --hue: 137.694590386;
+}
+.dot:nth-child(338) {
+  --hue: 11.6683227759;
+}
+.dot:nth-child(339) {
+  --hue: 271.7976014855;
+}
+.dot:nth-child(340) {
+  --hue: 131.2444675423;
+}
+.dot:nth-child(341) {
+  --hue: 293.1760897632;
+}
+.dot:nth-child(342) {
+  --hue: 271.1410592103;
+}
+.dot:nth-child(343) {
+  --hue: 193.5154875815;
+}
+.dot:nth-child(344) {
+  --hue: 200.3302639006;
+}
+.dot:nth-child(345) {
+  --hue: 357.7458931016;
+}
+.dot:nth-child(346) {
+  --hue: 164.3873100138;
+}
+.dot:nth-child(347) {
+  --hue: 225.8966648452;
+}
+.dot:nth-child(348) {
+  --hue: 205.9757625332;
+}
+.dot:nth-child(349) {
+  --hue: 245.0683028383;
+}
+.dot:nth-child(350) {
+  --hue: 353.5540281813;
+}
+.dot:nth-child(351) {
+  --hue: 150.0482410801;
+}
+.dot:nth-child(352) {
+  --hue: 55.3626926138;
+}
+.dot:nth-child(353) {
+  --hue: 32.9975534718;
+}
+.dot:nth-child(354) {
+  --hue: 99.6203741721;
+}
+.dot:nth-child(355) {
+  --hue: 244.9798140673;
+}
+.dot:nth-child(356) {
+  --hue: 204.5129980484;
+}
+.dot:nth-child(357) {
+  --hue: 282.4022968882;
+}
+.dot:nth-child(358) {
+  --hue: 260.0138898569;
+}
+.dot:nth-child(359) {
+  --hue: 286.5296650762;
+}
+.dot:nth-child(360) {
+  --hue: 50.6315502407;
+}
+.dot:nth-child(361) {
+  --hue: 344.5595218089;
+}
+.dot:nth-child(362) {
+  --hue: 67.5775286474;
+}
+.dot:nth-child(363) {
+  --hue: 99.0273801836;
+}
+.dot:nth-child(364) {
+  --hue: 109.0488551119;
+}
+.dot:nth-child(365) {
+  --hue: 37.0868316005;
+}
+.dot:nth-child(366) {
+  --hue: 216.4240179212;
+}
+.dot:nth-child(367) {
+  --hue: 211.810618448;
+}
+.dot:nth-child(368) {
+  --hue: 26.1684404492;
+}
+.dot:nth-child(369) {
+  --hue: 330.641231866;
+}
+.dot:nth-child(370) {
+  --hue: 198.3623935148;
+}
+.dot:nth-child(371) {
+  --hue: 184.9476463438;
+}
+.dot:nth-child(372) {
+  --hue: 79.9863566296;
+}
+.dot:nth-child(373) {
+  --hue: 291.3553112408;
+}
+.dot:nth-child(374) {
+  --hue: 150.7963789459;
+}
+.dot:nth-child(375) {
+  --hue: 114.7934731238;
+}
+.dot:nth-child(376) {
+  --hue: 188.4442620405;
+}
+.dot:nth-child(377) {
+  --hue: 286.1834255621;
+}
+.dot:nth-child(378) {
+  --hue: 181.0414183495;
+}
+.dot:nth-child(379) {
+  --hue: 208.4236298547;
+}
+.dot:nth-child(380) {
+  --hue: 338.1665631167;
+}
+.dot:nth-child(381) {
+  --hue: 311.395647592;
+}
+.dot:nth-child(382) {
+  --hue: 175.7779585062;
+}
+.dot:nth-child(383) {
+  --hue: 58.4905670282;
+}
+.dot:nth-child(384) {
+  --hue: 12.6334106518;
+}
+.dot:nth-child(385) {
+  --hue: 305.9068933149;
+}
+.dot:nth-child(386) {
+  --hue: 189.2763067105;
+}
+.dot:nth-child(387) {
+  --hue: 7.1447327819;
+}
+.dot:nth-child(388) {
+  --hue: 273.1108134517;
+}
+.dot:nth-child(389) {
+  --hue: 316.1364027938;
+}
+.dot:nth-child(390) {
+  --hue: 247.8865503558;
+}
+.dot:nth-child(391) {
+  --hue: 244.0558846893;
+}
+.dot:nth-child(392) {
+  --hue: 30.0961068405;
+}
+.dot:nth-child(393) {
+  --hue: 38.6928247727;
+}
+.dot:nth-child(394) {
+  --hue: 250.2072149821;
+}
+.dot:nth-child(395) {
+  --hue: 109.1338252159;
+}
+.dot:nth-child(396) {
+  --hue: 23.4288868229;
+}
+.dot:nth-child(397) {
+  --hue: 72.8396229141;
+}
+.dot:nth-child(398) {
+  --hue: 55.002989991;
+}
+.dot:nth-child(399) {
+  --hue: 142.6792034015;
+}
+.dot:nth-child(400) {
+  --hue: 205.9311579287;
+}
+.dot:nth-child(20n+1) {
+  --delay1: 0s;
+}
+.dot:nth-child(n+1):nth-child(-n+20) {
+  --delay2: 0s;
+}
+.dot:nth-child(20n+2) {
+  --delay1: -0.3s;
+}
+.dot:nth-child(n+21):nth-child(-n+40) {
+  --delay2: -0.2s;
+}
+.dot:nth-child(20n+3) {
+  --delay1: -0.6s;
+}
+.dot:nth-child(n+41):nth-child(-n+60) {
+  --delay2: -0.4s;
+}
+.dot:nth-child(20n+4) {
+  --delay1: -0.9s;
+}
+.dot:nth-child(n+61):nth-child(-n+80) {
+  --delay2: -0.6s;
+}
+.dot:nth-child(20n+5) {
+  --delay1: -1.2s;
+}
+.dot:nth-child(n+81):nth-child(-n+100) {
+  --delay2: -0.8s;
+}
+.dot:nth-child(20n+6) {
+  --delay1: -1.5s;
+}
+.dot:nth-child(n+101):nth-child(-n+120) {
+  --delay2: -1s;
+}
+.dot:nth-child(20n+7) {
+  --delay1: -1.8s;
+}
+.dot:nth-child(n+121):nth-child(-n+140) {
+  --delay2: -1.2s;
+}
+.dot:nth-child(20n+8) {
+  --delay1: -2.1s;
+}
+.dot:nth-child(n+141):nth-child(-n+160) {
+  --delay2: -1.4s;
+}
+.dot:nth-child(20n+9) {
+  --delay1: -2.4s;
+}
+.dot:nth-child(n+161):nth-child(-n+180) {
+  --delay2: -1.6s;
+}
+.dot:nth-child(20n+10) {
+  --delay1: -2.7s;
+}
+.dot:nth-child(n+181):nth-child(-n+200) {
+  --delay2: -1.8s;
+}
+.dot:nth-child(20n+11) {
+  --delay1: -3s;
+}
+.dot:nth-child(n+201):nth-child(-n+220) {
+  --delay2: -2s;
+}
+.dot:nth-child(20n+12) {
+  --delay1: -3.3s;
+}
+.dot:nth-child(n+221):nth-child(-n+240) {
+  --delay2: -2.2s;
+}
+.dot:nth-child(20n+13) {
+  --delay1: -3.6s;
+}
+.dot:nth-child(n+241):nth-child(-n+260) {
+  --delay2: -2.4s;
+}
+.dot:nth-child(20n+14) {
+  --delay1: -3.9s;
+}
+.dot:nth-child(n+261):nth-child(-n+280) {
+  --delay2: -2.6s;
+}
+.dot:nth-child(20n+15) {
+  --delay1: -4.2s;
+}
+.dot:nth-child(n+281):nth-child(-n+300) {
+  --delay2: -2.8s;
+}
+.dot:nth-child(20n+16) {
+  --delay1: -4.5s;
+}
+.dot:nth-child(n+301):nth-child(-n+320) {
+  --delay2: -3s;
+}
+.dot:nth-child(20n+17) {
+  --delay1: -4.8s;
+}
+.dot:nth-child(n+321):nth-child(-n+340) {
+  --delay2: -3.2s;
+}
+.dot:nth-child(20n+18) {
+  --delay1: -5.1s;
+}
+.dot:nth-child(n+341):nth-child(-n+360) {
+  --delay2: -3.4s;
+}
+.dot:nth-child(20n+19) {
+  --delay1: -5.4s;
+}
+.dot:nth-child(n+361):nth-child(-n+380) {
+  --delay2: -3.6s;
+}
+.dot:nth-child(20n+20) {
+  --delay1: -5.7s;
+}
+.dot:nth-child(n+381):nth-child(-n+400) {
+  --delay2: -3.8s;
+}
+
+
+
