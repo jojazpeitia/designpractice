@@ -31,8 +31,8 @@ export default function Design2() {
         cube
       </h1>
       <Canvas>
-        <ambientLight/>
-        <pointLight position={[0,0,0]} />
+        <ambientLight />
+        <pointLight intensity={1000} position={[10, 10, 10]} />
         <Cube />
       </Canvas>
     </div>
