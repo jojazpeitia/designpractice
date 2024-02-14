@@ -35,7 +35,7 @@ function Background() {
     });
     
     material.uniforms.tEquirect.value = texture;
-    const plane = new THREE.BoxGeometry(20, 20, 20);
+    const plane = new THREE.SphereGeometry(20, 20, 20);
 
     bgMesh = new THREE.Mesh(plane, material);
     scene.add(bgMesh);
