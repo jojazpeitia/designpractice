@@ -1,7 +1,7 @@
 'use client'
 import { Canvas, Vector3, useThree } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { TextureLoader} from "three";
+import { TextureLoader } from "three";
 import * as THREE from 'three'
 
 function Cube({ position, color }: { position: Vector3, color: string | number }) {
