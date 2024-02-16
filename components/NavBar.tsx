@@ -18,6 +18,9 @@ export default function NavBar() {
                     <li>
                         <Link href={'/design4'}> design4 </Link>
                     </li>
+                    <li>
+                        <Link href={'/design5'}> design5 </Link>
+                    </li>
                 </ul>
             </nav>
         </div>

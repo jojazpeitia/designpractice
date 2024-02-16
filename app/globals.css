@@ -21,33 +21,3 @@
     text-wrap: balance;
   }
 }
-
-/* body {
-  padding: 0;
-  margin: 0;
-  background-color:#ffffff;
-  background-image: radial-gradient(
-    #cecece 6px,
-    transparent 6px
-  );
-  background-size: 60px 60px;
-  animation: moveDots 5s linear infinite, pulsate 2s linear infinite;
-} */
-
-/* @keyframes moveDots {
-  0% {
-    background-position: 60px 60px;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-@keyframes pulsate {
-  0% {
-    background-color: 6px 6px;
-  }
-  100% {
-    background-size: 10px 10px;
-  }
-} */
